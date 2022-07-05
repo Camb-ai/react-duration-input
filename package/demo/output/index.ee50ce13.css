@@ -1,0 +1,56 @@
+.react-duration-input[type="text"] {
+  vertical-align: middle;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1.5px;
+  height: 1.6em;
+  background: none;
+  border: 1px solid #999;
+  border-radius: 4px;
+  outline: 2px solid #0000;
+  padding: 0 0 0 .3em;
+  line-height: normal;
+  transition: border-color .25s ease-in-out, box-shadow .25s ease-in-out;
+  display: inline-flex;
+  box-shadow: 0 0 2px 2px #0000;
+}
+
+.react-duration-input[type="text"][data-format="milliseconds"] {
+  width: 7.66em;
+}
+
+.react-duration-input[type="text"][data-format="seconds"] {
+  width: 5em;
+}
+
+.react-duration-input[type="text"]:disabled {
+  color: gray;
+  cursor: not-allowed;
+  user-select: none;
+  box-shadow: 0 0 2px 2px #bbb;
+}
+
+.react-duration-input[type="text"]:focus, .react-duration-input[type="text"]:focus-visible, .react-duration-input[type="text"]:active {
+  border: 1px solid #0000;
+  box-shadow: 0 0 2px 2px #005fcc;
+}
+
+.react-duration-input[type="text"]:focus:invalid, .react-duration-input[type="text"]:focus-visible:invalid, .react-duration-input[type="text"]:active:invalid {
+  box-shadow: 0 0 2px 2px #ea404d;
+}
+
+.react-duration-input[type="text"]:invalid {
+  border: 1px solid #0000;
+  box-shadow: 0 0 2px 2px #ea404d;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.ee50ce13.css.map */

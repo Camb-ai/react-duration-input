@@ -1,0 +1,58 @@
+.react-duration-input {
+  $outline-width: 2px;
+  $animation-time: 0.25s;
+
+  // color
+  $focus-color: rgb(0, 95, 204);
+  $invalid-color: #ea404d;
+
+  &[type='text'] {
+    display: inline-flex;
+    vertical-align: middle;
+
+    border: 1px solid #999999;
+    // border: 5px solid red;
+    border-radius: 4px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    // margin: 0px 5px;
+    padding: 0px 0px 0px 0.3em;
+    background: transparent;
+    box-shadow: 0 0 2px 2px transparent;
+    outline: $outline-width solid transparent;
+    transition: border-color $animation-time ease-in-out, box-shadow $animation-time ease-in-out;
+    height: 1.6em;
+
+    &[data-format='milliseconds'] {
+      width: 7.66em;
+    }
+
+    &[data-format='seconds'] {
+      width: 5em;
+    }
+
+    &:disabled {
+      box-shadow: 0 0 2px 2px #bbbbbb;
+      color: gray;
+      cursor: not-allowed;
+      user-select: none;
+    }
+
+    &:focus,
+    &:focus-visible,
+    &:active {
+      box-shadow: 0 0 2px 2px $focus-color;
+      border: 1px solid transparent;
+
+      &:invalid {
+        box-shadow: 0 0 2px 2px $invalid-color;
+      }
+    }
+
+    &:invalid {
+      box-shadow: 0 0 2px 2px $invalid-color;
+      border: 1px solid transparent;
+    }
+  }
+}
